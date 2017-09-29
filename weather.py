@@ -1,6 +1,6 @@
 import pyowm
 import constants
-from constants import place_name
+from constants import city_id
 import functions
 from functions import owm
 from functions import owm_status
@@ -21,12 +21,12 @@ stat = owm_status()
 
 if stat:
     '''the API was online, get readings'''
-    x = owm_time(place_name)
-    s = owm_speed(place_name)
-    d = owm_direction(place_name)
-    p = owm_pressure(place_name)
-    t = owm_temperature(place_name)
-    h = owm_humidity(place_name)
+    x = owm_time(city_id)
+    s = owm_speed(city_id)
+    d = owm_direction(city_id)
+    p = owm_pressure(city_id)
+    t = owm_temperature(city_id)
+    h = owm_humidity(city_id)
     ts = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
     '''Open output file in apend mode, write data'''

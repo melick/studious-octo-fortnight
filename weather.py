@@ -33,7 +33,7 @@ if stat:
     with open('datafile.csv', 'a') as datafile:
         csvwriter = csv.writer(datafile, delimiter=',', dialect='excel',
                                quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
-        csvwriter.writerow([x, s, d, p, t, h, ts])
+        csvwriter.writerow([city_id, x, s, d, p, t, h, ts])
 
 else:
     '''the API was online'''
